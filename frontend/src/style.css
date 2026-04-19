@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #1e1e2e;
+    color: #cdd6f4;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  /* 自定义滚动条 */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #181825;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #45475a;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #585b70;
+  }
+}
+
+@layer components {
+  /* 代码高亮覆盖 - 适配暗色主题 */
+  .prose pre {
+    position: relative;
+  }
+
+  .prose pre code.hljs {
+    background: transparent;
+    padding: 0;
+    font-size: 0.875rem;
+    line-height: 1.6;
+  }
+
+  /* 文章内容中的代码块语言标签 */
+  .prose pre[data-lang]::before {
+    content: attr(data-lang);
+    position: absolute;
+    top: 0.5rem;
+    right: 0.75rem;
+    font-size: 0.7rem;
+    color: #6c7086;
+    font-family: 'JetBrains Mono', monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  /* TOC 激活链接 */
+  .toc-link.active {
+    color: #89dceb;
+    border-left-color: #89dceb;
+  }
+
+  /* 页面过渡动画 */
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: opacity 0.2s ease;
+  }
+  .fade-enter-from,
+  .fade-leave-to {
+    opacity: 0;
+  }
+
+  /* 卡片悬停效果 */
+  .post-card {
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
+  }
+  .post-card:hover {
+    transform: translateY(-2px);
+  }
+}
+
+/* highlight.js 暗色主题（基于 Catppuccin Mocha） */
+.hljs {
+  background: #181825;
+  color: #cdd6f4;
+}
+.hljs-comment, .hljs-quote { color: #6c7086; font-style: italic; }
+.hljs-keyword, .hljs-selector-tag { color: #cba6f7; }
+.hljs-string, .hljs-attr { color: #a6e3a1; }
+.hljs-number, .hljs-literal { color: #fab387; }
+.hljs-function, .hljs-title { color: #89b4fa; }
+.hljs-variable, .hljs-template-variable { color: #cdd6f4; }
+.hljs-type, .hljs-class { color: #f9e2af; }
+.hljs-built_in { color: #89dceb; }
+.hljs-meta { color: #f38ba8; }
+.hljs-emphasis { font-style: italic; }
+.hljs-strong { font-weight: bold; }
+.hljs-deletion { color: #f38ba8; }
+.hljs-addition { color: #a6e3a1; }
