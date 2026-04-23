@@ -46,7 +46,7 @@ COPY --from=backend-builder /app/blog          ./blog
 COPY --from=frontend-builder /app/dist         ./dist
 COPY backend/content                           ./content
 
-EXPOSE 8080
+EXPOSE 8999
 
 ENV GIN_MODE=release
 
