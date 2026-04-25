@@ -36,7 +36,8 @@ func main() {
 			c.JSON(http.StatusNotFound, gin.H{"error": "not found"})
 			return
 		}
-		// SPA 路由，返回 index.html
+		// SPA 路由，返回 index.html 并显式声明 UTF-8，避免标题中文乱码
+		c.Header("Content-Type", "text/html; charset=utf-8")
 		c.File("./dist/index.html")
 	})
 

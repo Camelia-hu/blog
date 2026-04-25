@@ -72,13 +72,16 @@ func parseMarkdown(content []byte) (models.FrontMatter, string, error) {
 
 // displayName 将 slug 转换为可读的分类名称
 func displayName(slug string) string {
-	parts := strings.Split(slug, "-")
-	for i, p := range parts {
-		if len(p) > 0 {
-			parts[i] = strings.ToUpper(p[:1]) + p[1:]
+	words := strings.Fields(strings.ReplaceAll(slug, "-", " "))
+	for i, word := range words {
+		runes := []rune(word)
+		if len(runes) == 0 {
+			continue
 		}
+		runes[0] = []rune(strings.ToUpper(string(runes[0])))[0]
+		words[i] = string(runes)
 	}
-	return strings.Join(parts, " ")
+	return strings.Join(words, " ")
 }
 
 // GetCategories 返回所有分类列表

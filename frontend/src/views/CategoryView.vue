@@ -67,6 +67,7 @@ const iconMap = {
   'system-design': '📐',
   go: '🐹',
   mind: '🌸',
+  ai: '🤖',
 }
 
 const categorySlug = computed(() => route.params.slug)

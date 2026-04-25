@@ -113,6 +113,7 @@ const iconMap = {
   'system-design': '📐',
   go: '🐹',
   mind: '🌸',
+  ai: '🤖',
 }
 
 function categoryIcon(slug) {
