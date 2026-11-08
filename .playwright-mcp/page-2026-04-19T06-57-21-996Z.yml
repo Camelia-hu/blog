@@ -1,0 +1,108 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - navigation "Header" [ref=e3]:
+      - img [ref=e5] [cursor=pointer]
+      - generic [ref=e8]:
+        - generic [ref=e10]: Mayo
+        - generic:
+          - generic: Home
+      - generic [ref=e11]:
+        - radio "Switch to dark mode"
+        - generic "Switch to dark mode" [ref=e12] [cursor=pointer]:
+          - img [ref=e13]
+        - radio "Switch to light mode"
+      - dialog [ref=e15]:
+        - search [ref=e16]:
+          - generic [ref=e17]:
+            - textbox "Search" [ref=e18]
+            - generic:
+              - img
+            - navigation "Search":
+              - link "Share":
+                - /url: https://everoot.github.io/Blog/?q=
+                - img
+              - button "Clear":
+                - img
+          - generic [ref=e21]: Initializing search
+      - link "GitHub" [ref=e23] [cursor=pointer]:
+        - /url: https://github.com/Everoot
+        - img [ref=e25]
+        - generic [ref=e27]: GitHub
+  - generic [ref=e28]:
+    - banner [ref=e29]:
+      - heading [level=1] [ref=e31]
+      - link "↓" [ref=e34] [cursor=pointer]:
+        - /url: "#intro-cards"
+        - generic [ref=e35]: ↓
+    - main [ref=e36]:
+      - generic [ref=e37]:
+        - navigation "Navigation" [ref=e40]:
+          - generic [ref=e41] [cursor=pointer]:
+            - link "Mayo" [ref=e42]:
+              - /url: .
+              - img "logo" [ref=e43]
+            - text: Mayo
+          - list [ref=e44]:
+            - listitem [ref=e45]:
+              - link "Home" [ref=e46] [cursor=pointer]:
+                - /url: .
+                - generic [ref=e47]: Home
+            - listitem [ref=e48]:
+              - link "Algorithms" [ref=e49] [cursor=pointer]:
+                - /url: Algorithms/
+                - generic [ref=e50]: Algorithms
+            - listitem [ref=e52]:
+              - link "Architecture" [ref=e53] [cursor=pointer]:
+                - /url: Architecture/
+                - generic [ref=e54]: Architecture
+            - listitem [ref=e56]:
+              - link "Database" [ref=e57] [cursor=pointer]:
+                - /url: Database/
+                - generic [ref=e58]: Database
+            - listitem [ref=e60]:
+              - link "OS" [ref=e61] [cursor=pointer]:
+                - /url: OS/
+                - generic [ref=e62]: OS
+            - listitem [ref=e64]:
+              - link "Network" [ref=e65] [cursor=pointer]:
+                - /url: Network/
+                - generic [ref=e66]: Network
+            - listitem [ref=e68]:
+              - link "Tools" [ref=e69] [cursor=pointer]:
+                - /url: Tools/
+                - generic [ref=e70]: Tools
+            - listitem [ref=e72]:
+              - link "Projects" [ref=e73] [cursor=pointer]:
+                - /url: Projects/
+                - generic [ref=e74]: Projects
+            - listitem [ref=e76]:
+              - link "System Design" [ref=e77] [cursor=pointer]:
+                - /url: System%20Design/Design%20A%20Search%20Autocomplete%20System/
+                - generic [ref=e78]: System Design
+            - listitem [ref=e80]:
+              - link "Blog" [ref=e81] [cursor=pointer]:
+                - /url: blog/
+                - generic [ref=e82]: Blog
+        - article [ref=e85]:
+          - generic [ref=e87]:
+            - heading "For what?" [level=2] [ref=e88]
+            - generic [ref=e90]:
+              - img "Eve Liang" [ref=e91]
+              - heading "Me" [level=3] [ref=e92]
+              - blockquote [ref=e93]: 打怪升级的记录吧
+      - button "Back to top":
+        - img
+        - text: Back to top
+    - contentinfo [ref=e94]:
+      - navigation "Footer" [ref=e95]:
+        - 'link "Next: README" [ref=e96] [cursor=pointer]':
+          - /url: Algorithms/
+          - generic [ref=e97]:
+            - text: Next
+            - generic [ref=e98]: README
+          - img [ref=e100]
+      - generic [ref=e103]:
+        - generic [ref=e105]: Copyright © 2023 Mayo
+        - link "github.com" [ref=e107] [cursor=pointer]:
+          - /url: https://github.com/Everoot
+          - img [ref=e108]
